@@ -1,0 +1,408 @@
+body {
+    background-image: linear-gradient(90deg,  rgb(252, 11, 160), rgb(62, 255, 23));
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+    position: relative;
+}
+
+header {
+    height: 52px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(90deg,  rgb(255, 53, 177), rgb(86, 235, 17));
+    color: rgb(255, 229, 229);
+    z-index: 1;
+}
+
+nav {
+    text-align: center;
+    position: relative;
+}
+
+nav li {
+    display: inline-block;
+    margin: 16px 10px;
+}
+
+nav li:not(:last-child):after {
+    content: "•";
+    margin-left: 24px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(255, 229, 229);
+    transition: 0.3s color;
+}
+
+nav li a:hover{
+    color: rgba(255, 229, 229, 0.5);
+}
+
+@media screen and (max-width:1040px) {
+    header {
+        display: none;
+    }
+}
+
+.menu-mobile {
+    width: 250px;
+    height: 400px;
+    background-image: linear-gradient(90deg,  rgb(51, 150, 26), rgb(204, 4, 161));
+    position: fixed;
+    top: 8px;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    z-index: 1;
+}
+
+.display-menu {
+    display: none;
+}
+
+.icone-menu {
+    display: none;
+    position: absolute;    
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    transition: 0.3s opacity;
+}
+
+.icone-exit {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    transition: 0.3s opacity;
+}
+
+.icone-menu:hover, .icone-exit:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.nav-mobile {
+    position: relative;
+}
+
+.nav-mobile ul {
+    position: absolute;
+    top: 100px;
+    left: 48px;
+}
+
+.nav-mobile li {
+    margin-bottom: 16px;
+}
+
+.nav-mobile li::before {
+    content: "•";
+    color: rgb(255, 229, 229);
+}
+
+.nav-mobile a {
+    text-decoration: none; 
+    transition: 0.3s color;
+    margin-left: 8px;
+}
+
+.nav-mobile a:hover {
+    color: rgba(255, 229, 229, 0.5);
+}
+
+@media screen and (max-width:1040px) {
+    .icone-menu {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width:1041px) {
+    .menu-mobile {
+        display: none;
+    }
+}
+       
+section {
+    width: 1020px;
+    height: 480px;
+    margin: 0 auto;
+    padding-top: 48px;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.pessoa {
+    display: inline-block;
+}
+
+.pessoa h1 {
+    font-size: 72px;
+    margin-top: 64px;
+}
+
+.fotoperfil {
+    position: absolute;
+    width: 300px;
+    aspect-ratio: 1;
+    background-image: url('../RENOVAR.fotoperil.png.jpg');
+    background-position: center;
+    background-size: cover;
+    right: 80px;
+    top: 90px;
+    border-radius: 50%;
+    border: rgb(255, 198, 227) 6px solid;
+}
+
+.pessoa h2 {
+    margin: 16px 0;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.icones-informacoes {
+    width: 40px;
+}
+
+.contato {
+    position: relative;
+    margin-top: 4px;
+}
+
+.contato p {
+    position: absolute;
+    top: 10px;
+    left: 48px;
+}
+
+.midias {  
+    position: absolute;
+    right: 0;
+    top: 170px;
+}
+
+.midias img {
+    width: 48px;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.7s transform;
+}
+
+.midias img:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width:1040px) {
+    section {
+        width: 360px;
+        height: 440px;
+    }
+
+    .fotoperfil {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 120px;
+        top: 16px;
+        border-width: 2px; 
+    }
+
+    .pessoa {
+        display: block;
+    }
+
+    .pessoa h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 120px;
+    }
+
+    .pessoa h2 {
+        text-align: center;
+        font-size: 14px;
+        margin: 4px 0 24px;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .icones-informacoes {
+        width: 32px;
+    }
+    
+    .contato {
+        position: relative;
+        margin-left: 32px;
+    }
+    
+    .contato p {
+        top: 7px;
+        left: 40px;
+    }
+
+    .midias {  
+        position: absolute;
+        top: 400px;
+        right: 0;
+        left: 0px;
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .midias img {
+        width: 48px;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+}
+
+main {
+    background: rgb(19, 233, 47);
+    padding: 48px 0;
+    color: rgb(255, 255, 255);
+}
+
+main div {
+    width: 1020px;
+    margin: 0 auto;    
+}
+
+.sobre-mim {
+    position: relative;
+}
+
+.foto-sobre-mim {
+    width: 400px;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 1px 1px 16px rgba(82, 4, 56, 0.2);
+}
+
+.texto-sobre-mim {
+    display: inline-block;
+    width: 480px;
+    vertical-align: top;
+    position: absolute;
+    right: 0;
+    top: 48px;
+}
+
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 48px;
+    
+}
+
+.background-texto {
+    background-color: rgb(248, 50, 172);
+    box-shadow: 1px 1px 16px rgba(38, 223, 13, 0.74);
+    color: rgb(255, 255, 255);
+    padding: 18px;
+    display: inline-block;
+    border-radius: 8px;
+    width: 45%;
+    box-sizing: border-box;
+    vertical-align: top;
+    height: 100px;
+}
+
+.background-texto a {
+    color: rgb(255, 255, 255);
+}
+
+.margem-caixas {
+    margin: 2.3%;
+}
+
+.icones-interesses {
+    width: 80px;
+    transition: 0.7s transform;
+}
+
+.icones-interesses:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.display-informacoes-interesses {
+    display: none;
+}
+
+@media screen and (max-width:1040px) {
+    main {
+        padding: 16px 0;
+    }
+    main div {
+        width: 340px;
+        padding: 8px;
+    }
+
+    .foto-sobre-mim {
+        width: 100%;
+        opacity: 0.2;
+        position: relative;
+    }
+
+    .texto-sobre-mim {
+        display: block;
+        width: 300px;
+        text-align: center;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+
+    .titulo {
+        font-size: 25px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .background-texto {
+        font-size: 13px;
+        width: 100%;
+        height: 88px;
+    }
+
+    .margem-caixas {
+        margin: 0 0 2.3% 0;
+    }
+
+    .icones-interesses {
+        width: 60px;
+    }
+}
+
+footer {
+    height: 180px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+footer, a {
+    color: rgb(255, 255, 255);
+}
+
+.footer-informacoes {
+    width: 1020px;
+    margin: 0 auto 52px;
+}
+
+.fale-comigo {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:1040px) {
+    footer {
+        padding: 16px 0 24px 0;
+    }
+    .footer-informacoes  {
+        width: 200px;
+    }
+}
